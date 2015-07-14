@@ -1,0 +1,1 @@
+<?php echo $this->element("sys_ads_form_edit" , array("model" => "AdLeftTop" , "str" => "左サイドバー上バナー" , "titles" => $titles , "comment" => true))?>

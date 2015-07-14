@@ -1,0 +1,1 @@
+<?php echo $this->element("sys_ads_form_edit" , array("model" => "AdRightBottom" , "str" => "右サイドバー下バナー" , "sort" => true))?>

@@ -1,0 +1,1 @@
+<?php echo $this->element("sys_ads_form_edit" , array("model" => "AdCenterBottom" , "str" => "中央コンテンツ下バナー"))?>
