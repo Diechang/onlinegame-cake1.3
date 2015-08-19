@@ -432,7 +432,17 @@ class Title extends AppModel {
 			"Title.service_id" => array(2,3),
 		);
 		if(isset($service_id)){		$conditions["Title.service_id"]			= $service_id; }
-		if(isset($start_year)){		$conditions["Title.service_start LIKE"]	= $start_year . "%"; }
+		if(isset($start_year))
+		{
+			$conditions["Title.service_start LIKE"]	= $start_year . "%";
+		}
+		else
+		{
+			$conditions["OR"] = array(
+				"Title.service_start > " => date("Y-m-d", strtotime("-3year")),
+				"Title.test_start > " => date("Y-m-d", strtotime("-3year"))
+			);
+		}
 //		pr($conditions);
 		return $conditions;
 	}
