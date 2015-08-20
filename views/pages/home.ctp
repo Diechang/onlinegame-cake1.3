@@ -15,7 +15,7 @@
 
 <!-- Ranking -->
 <div class="content ranking">
-	<h2 class="image"><?php echo $html->image("design/content_ranking_title.gif" , array("alt" => "人気オンラインゲームランキング：ユーザーの評価投稿による人気オンラインゲームランキングです"))?></h2>
+	<h2 class="image"><?php echo $html->image("design/content_ranking_title_new.gif" , array("alt" => "今が旬のおすすめ人気オンラインゲームランキング：正式サービス・各種テスト開始から2年以内のオンラインゲームランキングです"))?></h2>
 	<div class="body">
 		<!--AllCategory-->
 		<div class="rankingWide">
