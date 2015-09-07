@@ -32,9 +32,13 @@
 <?php foreach($categoryRankings as $categoryRanking):?>
 			<li>
 				<h3><?php echo $html->link($categoryRanking["Category"]["str"] . "ランキング" , array("controller" => "ranking" , "action" => "index" , "path" => $categoryRanking["Category"]["path"] , "ext" => "html"))?></h3>
-				<p><?php echo $this->Common->titleLinkText(
+				<p>
+	<?php if(!empty($categoryRanking["Ranking"])):?>
+				<?php echo $this->Common->titleLinkText(
 						$this->Common->titleWithSpan($categoryRanking["Ranking"][0]["Title"]["title_official"] , $categoryRanking["Ranking"][0]["Title"]["title_read"]),
-						$categoryRanking["Ranking"][0]["Title"]["url_str"])?></p>
+						$categoryRanking["Ranking"][0]["Title"]["url_str"])?>
+	<?php endif;?>
+				</p>
 			</li>
 <?php endforeach;?>
 		</ul>
