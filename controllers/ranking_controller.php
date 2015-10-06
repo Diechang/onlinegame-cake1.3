@@ -91,6 +91,11 @@ class RankingController extends AppController {
 						"Title.id" => $rankings["idList"],
 						"Title.service_id" => array(2,3),
 						"Titlesummary.vote_count_vote" => 0,
+
+						"OR" => array(
+							"Title.service_start > " => date("Y-m-d", strtotime("-2year")),
+							"Title.test_start > " => date("Y-m-d", strtotime("-2year"))
+						),
 					),
 					"order" => "Title.title_official",
 				));
@@ -104,6 +109,11 @@ class RankingController extends AppController {
 						"Title.public" => 1,
 						"Title.service_id" => array(2,3),
 						"Titlesummary.vote_count_vote" => 0,
+
+						"OR" => array(
+							"Title.service_start > " => date("Y-m-d", strtotime("-2year")),
+							"Title.test_start > " => date("Y-m-d", strtotime("-2year"))
+						),
 					),
 					"order" => "Title.title_official",
 				));

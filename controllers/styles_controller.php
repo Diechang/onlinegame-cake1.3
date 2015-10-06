@@ -29,6 +29,7 @@ class StylesController extends AppController {
 		$titles = $this->Title->find("all" , array(
 			"conditions" => array(
 				"Title.public" => 1,
+				"Title.service_id NOT" => 1,
 				"Style.id" => $pageData["Style"]["id"],
 			),
 			"fields" => array(
