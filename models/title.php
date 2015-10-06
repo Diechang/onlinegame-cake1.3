@@ -439,8 +439,8 @@ class Title extends AppModel {
 		else
 		{
 			$conditions["OR"] = array(
-				"Title.service_start > " => date("Y-m-d", strtotime("-3year")),
-				"Title.test_start > " => date("Y-m-d", strtotime("-3year"))
+				"Title.service_start > " => date("Y-m-d", strtotime("-2year")),
+				"Title.test_start > " => date("Y-m-d", strtotime("-2year"))
 			);
 		}
 //		pr($conditions);

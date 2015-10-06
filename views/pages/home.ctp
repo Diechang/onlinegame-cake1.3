@@ -15,7 +15,7 @@
 
 <!-- Ranking -->
 <div class="content ranking">
-	<h2 class="image"><?php echo $html->image("design/content_ranking_title.gif" , array("alt" => "人気オンラインゲームランキング：ユーザーの評価投稿による人気オンラインゲームランキングです"))?></h2>
+	<h2 class="image"><?php echo $html->image("design/content_ranking_title_new.gif" , array("alt" => "今が旬のおすすめ人気オンラインゲームランキング：正式サービス・各種テスト開始から2年以内のオンラインゲームランキングです"))?></h2>
 	<div class="body">
 		<!--AllCategory-->
 		<div class="rankingWide">
@@ -32,9 +32,13 @@
 <?php foreach($categoryRankings as $categoryRanking):?>
 			<li>
 				<h3><?php echo $html->link($categoryRanking["Category"]["str"] . "ランキング" , array("controller" => "ranking" , "action" => "index" , "path" => $categoryRanking["Category"]["path"] , "ext" => "html"))?></h3>
-				<p><?php echo $this->Common->titleLinkText(
+				<p>
+	<?php if(!empty($categoryRanking["Ranking"])):?>
+				<?php echo $this->Common->titleLinkText(
 						$this->Common->titleWithSpan($categoryRanking["Ranking"][0]["Title"]["title_official"] , $categoryRanking["Ranking"][0]["Title"]["title_read"]),
-						$categoryRanking["Ranking"][0]["Title"]["url_str"])?></p>
+						$categoryRanking["Ranking"][0]["Title"]["url_str"])?>
+	<?php endif;?>
+				</p>
 			</li>
 <?php endforeach;?>
 		</ul>
