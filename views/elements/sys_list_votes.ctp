@@ -50,7 +50,7 @@
 			<td class="tRight"><?php echo $v["Vote"]["item9"]?></td>
 			<td class="tRight"><?php echo $v["Vote"]["item10"]?></td>
 			<td class="tRight"><?php echo $this->Common->pointFormat($v["Vote"]["single_avg"])?></td>
-			<td class="tCenter"<?php if(!empty($v["Vote"]["review"])):?> title="<?php echo $v["Vote"]["review"] . " (" . mb_strlen($v["Vote"]["review"]) . ")"?>"<?php endif;?>><?php echo (!empty($v["Vote"]["review"])) ? "○" : " "?></td>
+			<td class="tCenter"<?php if(!empty($v["Vote"]["review"])):?> title="<?php echo $v["Vote"]["review"] . " (" . mb_strlen($v["Vote"]["review"]) . ")"?>"<?php endif;?>><?php echo (!empty($v["Vote"]["review"])) ? "(" . mb_strlen($v["Vote"]["review"]) . ")" : " "?></td>
 			<td><?php echo h($v["Vote"]["poster_name"])?></td>
 			<td><?php echo $v["Vote"]["ip"]?></td>
 			<td><?php echo $v["Vote"]["cookey"]?></td>
