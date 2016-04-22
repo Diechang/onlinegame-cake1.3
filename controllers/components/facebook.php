@@ -19,11 +19,12 @@ class FacebookComponent extends Object
 	var $appToken	= "293306697370465|oZWkaWqacvnS60uEmSpmMM8TF1c";
 
 	var $pageId		= "386549498021855";
-	var $pageToken	= "AAAEKwsmBy2EBANd1FS4KcfblLAjGkuFGnnD2aajHlw1cgK0CeKTJd1x0RAIXkvZBSEdm5v8qkGsqJgc5ROwGpZBUZC1aJExYuABBuP0XZBZCygoVy6abx";
+	var $pageToken	= "EAAEKwsmBy2EBAK7AUs5Tu5zRbZBkXiNpyOnDRj8do32axKbfEL7mY2KgvEOvzXolt9n7mRLjNsB0ZCaWM9rHZAzuCYcEcHAZAayi8WUQQa12Vpwg2ZBBaPtUZCuvP46ACNfzJpILWYvksHs7Oxz7ulIzwOcakzV3ZBW8mGNRfpIfgZDZD";
 	
 	var $tokenExpiration	= false;	//↑トークン期限切れ
 	
-	var $loginScope		= "status_update,publish_stream,manage_pages";
+	// var $loginScope		= "status_update,publish_stream,manage_pages";
+	var $loginScope		= "manage_pages";
 	var $loginRedirect	= "http://onlinegame.dz-life.net/sys/shares";
 	
 	var $errorMessage	= "";
